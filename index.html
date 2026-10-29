@@ -1,0 +1,38 @@
+---
+layout: default
+title: Bienvenue
+---
+
+<section class="parcours">
+  {% for item in site.data.parcours %}
+    <div class="section-block">
+      <h2>{{ item.titre }}</h2>
+      <p style="white-space: pre-line;">{{ item.description }}</p>
+    </div>
+  {% endfor %}
+</section>
+
+<section class="objectifs">
+  {% for item in site.data.objectifs %}
+    <div class="section-block">
+      <h2>{{ item.titre }}</h2>
+      <p style="margin-bottom: 0.8rem;">Un seul objectif principal : <strong>amasser un capital financier solide</strong> pour financer mes grandes ambitions.</p>
+      <ul>
+        {% for detail in item.details %}
+          <li>{{ detail }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</section>
+
+<section class="contact">
+  <div class="section-block">
+    <h2>💬 Contact & Projets</h2>
+    <p>Tu souhaites échanger sur un projet business, une collaboration ou simplement discuter investissement ou MMA ?</p>
+    <br>
+    <ul>
+      <li><strong>Réseaux :</strong> Retrouve mes liens en bas de page.</li>
+    </ul>
+  </div>
+</section>
